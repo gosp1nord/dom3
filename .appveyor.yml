@@ -20,7 +20,7 @@ deploy:  # скрипт развёртывания
   description: 'DOM3'
   provider: GitHub
   auth_token:
-    secure: $(GITHUB_TOKEN)
+    secure: QYZ9IfLbWsraZNIUoRKWrVdb88S+dQjOhZQVjV59WplVkQDWaI8Cqt44Q/1TXxUZ
   draft: false
   prerelease: false
   on:
