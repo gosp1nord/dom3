@@ -7,7 +7,7 @@
     "start": "webpack serve --mode development",
     "lint": "eslint .",
     "build": "webpack --mode production",
-    "deploy": "push-dir --dir=public --branch=gh-pages --cleanup",
+    "deploy": "push-dir --dir=public --branch=gh-pages --force --verbose",
     "test": "jest"
   },
   "author": "",
