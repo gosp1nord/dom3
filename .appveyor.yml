@@ -16,13 +16,9 @@ build: off  # отключаем встроенную в appveyor систему
 build_script:
   - npm run build   # команда сборки
 
-deploy:  # скрипт развёртывания
-  - provider: GitHub
-    description: 'DOM3'
-    auth_token:
-      secure: QYZ9IfLbWsraZNIUoRKWrVdb88S+dQjOhZQVjV59WplVkQDWaI8Cqt44Q/1TXxUZ
-    draft: false
-    prerelease: false
-    force_update: true
-    on:
-      branch: master
+deploy_script:  # скрипт развёртывания
+  - git config --global credential.helper store
+  - git config --global user.name AppVeyor
+  - git config --global user.email ci@appveyor.com
+  - echo "https://$GITHUB_TOKEN:x-oauth-basic@github.com" > "$HOME/.git-credentials"
+  - npm run deploy
